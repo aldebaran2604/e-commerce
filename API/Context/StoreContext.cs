@@ -2,7 +2,7 @@ using API.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Context;
-internal class StoreContext : DbContext
+public class StoreContext : DbContext
 {
     #region Properties
 
