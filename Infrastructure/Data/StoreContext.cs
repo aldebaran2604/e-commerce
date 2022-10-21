@@ -1,12 +1,13 @@
-using API.Models;
+using Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace API.Context;
+namespace Infrastructure.Data;
+
 public class StoreContext : DbContext
 {
     #region Properties
 
-    public DbSet<Product>? products {get; set;}
+    public DbSet<Product>? Products {get; set;}
 
     #endregion
 

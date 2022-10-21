@@ -1,5 +1,5 @@
-using API.Context;
-using API.Models;
+using Core.Entities;
+using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,7 +18,7 @@ public class ProductsController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<Product>>> GetProducts()
     {
-        var products = await _storeContext.products?.ToListAsync();
+        var products = await _storeContext.Products?.ToListAsync();
 
         return Ok(products);
     }
@@ -26,7 +26,7 @@ public class ProductsController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<Product>> GetProduct(int id)
     {
-        var product = _storeContext.products.FirstOrDefaultAsync(p=> p.Id == id);
+        var product = await _storeContext.Products?.FirstOrDefaultAsync(p=> p.Id == id);
         return Ok(product);
     }
 }
