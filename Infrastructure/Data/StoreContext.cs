@@ -7,7 +7,7 @@ public class StoreContext : DbContext
 {
     #region Properties
 
-    public DbSet<Product>? Products {get; set;}
+    public DbSet<Product> Products {get; set;} = null!;
 
     #endregion
 
