@@ -46,6 +46,48 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Products/Brands GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7091/api/products/brands",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7091",
+					"path": [
+						"api",
+						"products",
+						"brands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products/Types GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7091/api/products/types",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7091",
+					"path": [
+						"api",
+						"products",
+						"types"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
