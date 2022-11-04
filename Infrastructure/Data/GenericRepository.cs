@@ -29,9 +29,9 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
         return await ApplySpecification(specification).FirstOrDefaultAsync();
     }
 
-    public Task<IReadOnlyList<T>> ListAsync(ISpecification<T> specification)
+    public async Task<IReadOnlyList<T>> ListAsync(ISpecification<T> specification)
     {
-        throw new NotImplementedException();
+        return await ApplySpecification(specification).ToListAsync();
     }
 
     private IQueryable<T> ApplySpecification(ISpecification<T> specification)
