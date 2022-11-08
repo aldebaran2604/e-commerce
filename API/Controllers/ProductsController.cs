@@ -34,7 +34,6 @@ public class ProductsController : ControllerBase
     public async Task<ActionResult<IReadOnlyList<ProductDTO?>>> GetProducts()
     {
         var specification = new ProductsWithTypesAndBrandsSpecification();
-
         var products = await _productRepo.ListAsync(specification);
         var productsDTO = _mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductDTO>>(products);
         return Ok(productsDTO);
@@ -44,7 +43,6 @@ public class ProductsController : ControllerBase
     public async Task<ActionResult<ProductDTO?>> GetProduct(int id)
     {
         var specification = new ProductsWithTypesAndBrandsSpecification(id);
-
         var product = await _productRepo.GetEntityWithSpecification(specification);
         var productDTO = _mapper.Map<Product, ProductDTO>(product);
         return Ok(productDTO);
