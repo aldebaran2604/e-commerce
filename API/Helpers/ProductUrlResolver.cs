@@ -1,6 +1,7 @@
 using API.DTO;
 using AutoMapper;
 using Core.Entities;
+using Microsoft.Extensions.Configuration;
 
 namespace API.Helpers;
 
@@ -18,7 +19,7 @@ public class ProductUrlResolver : IValueResolver<Product, ProductDTO, string?>
         string urlPicture = string.Empty;
         if (!string.IsNullOrEmpty(source.PictureURL))
         {
-            Uri fullUri = new Uri(new Uri(_configuration["ApiUrl"]), source.PictureURL);
+            Uri fullUri = new Uri(new Uri($"{_configuration["ApiUrl"]}"), source.PictureURL);
             urlPicture = fullUri.AbsoluteUri;
         }
 

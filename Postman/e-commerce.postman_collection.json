@@ -88,6 +88,91 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Buggy/notfound GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7091/api/buggy/notfound",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7091",
+					"path": [
+						"api",
+						"buggy",
+						"notfound"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buggy/servererror GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7091/api/buggy/servererror",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7091",
+					"path": [
+						"api",
+						"buggy",
+						"servererror"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buggy/badrequest GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7091/api/buggy/badrequest",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7091",
+					"path": [
+						"api",
+						"buggy",
+						"badrequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buggy/badrequest/M GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7091/api/buggy/badrequest/M",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7091",
+					"path": [
+						"api",
+						"buggy",
+						"badrequest",
+						"M"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
