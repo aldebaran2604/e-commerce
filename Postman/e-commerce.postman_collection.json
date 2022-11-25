@@ -173,6 +173,40 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Products GET Query",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7091/api/products?pageSize=1&pageIndex=1&sort=priceDesc",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7091",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "1"
+						},
+						{
+							"key": "pageIndex",
+							"value": "1"
+						},
+						{
+							"key": "sort",
+							"value": "priceDesc"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
